@@ -1,0 +1,18 @@
+﻿@model BigBombsWeb.Models.UserProfile
+<div id="profileDetails">
+    <h2>Profile Details @Html.DisplayFor(model => model.UserName)</h2>
+    <fieldset>
+        <legend>UserProfile</legend>
+        <div class="display-label">
+             <h3>@Html.DisplayNameFor(model => model.Wins) : @Html.DisplayFor(model => model.Wins)</h3>
+        </div>
+
+        <div class="display-label">
+             <h3>@Html.DisplayNameFor(model => model.Losses) : @Html.DisplayFor(model => model.Losses)</h3>
+        </div>
+
+        <div class="display-label">
+             <h3>@Html.DisplayNameFor(model => model.Experience) : @Html.DisplayFor(model => model.Experience)</h3>
+        </div>
+    </fieldset>
+</div>

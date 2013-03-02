@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href='http://fonts.googleapis.com/css?family=Tienne' rel='stylesheet' type='text/css'>
+
+
+    <link href="styles.css" rel="stylesheet" />
+    <link href="modalbasic.css" rel="stylesheet" />
+    <link href="messi.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.6.4.js"></script>
+    <script src="Scripts/kinetic-v3.9.1.js"></script>
+    <script src="Scripts/jquery.signalR-1.0.0-rc2.min.js"></script>
+    <script src="Scripts/jquery.simplemodal.1.4.3.min.js"></script>
+    <script src="messi.js"></script>
+    <script src="Scripts/bb/mine.js"></script>
+    <script src="Scripts/bb/pig.js"></script>
+    <script src="Scripts/bb/chicken.js"></script>
+    <script src="Scripts/bb/bigbomb.js"></script>
+    <script src="Scripts/bb/siteController.js"></script>
+    <script src="Scripts/bb/bigBombsGame.js"></script>
+    <script src="signalr/hubs"></script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="options">
+            <button id="btn-create-game" class="button">Create Game</button>
+            <button id="btn-join-game" class="button">Join Game</button>
+            <label for="game-id-join">Game ID (provided by your friend)</label>
+            <input type="text" id="game-id-join" />
+        </div>
+        <div id="mdl-waiting">
+            <h4>You should give your game ID to your friend who wants to join you.</h4>
+            <h4>Your game ID is:</h4>
+            <h3 id="groupID"></h3>
+        </div>
+        <div id="game-wrapper">
+            <div id="hud-container">
+                <div id="on-turn-wrapper">
+                    <h3>move:</h3>
+                    <h1>pavel</h1>
+                </div>
+                <div id="players-money">
+                    <h3>money:</h3>
+                    <h2><span>pavel</span>: <span id="first-player-money">100</span>$</h2>
+                    <h2><span>gosho</span>: <span id="second-player-money">100</span>$</h2>
+                </div>
+                <div id="unit-selection">
+                    <div id="build-stage-wrapper">
+                        <h3>units:</h3>
+                        <div class="unit-wrapper clearfix">
+                            <h2>mine: 6$</h2>
+                            <img src="images/saltmine.png" width="70" height="70" class="left" />
+                            <button id="add-mine" disabled>+</button>
+                            <input type="text" id="value-mine" value="1" disabled/>
+                            <button id="remove-mine" disabled>-</button>
+                            <div class="clear"></div>
+                            <button id="place-mine" class="small-button">Place</button>
+                        </div>
+                        <div class="unit-wrapper clearfix">
+                            <h2>chicken: 1$</h2>
+                            <img src="images/chicken.gif" width="70" height="70" class="left" />
+                            <button id="add-chicken">+</button>
+                            <input type="text" id="value-chicken" disabled value="1" />
+                            <button id="remove-chicken" >-</button>
+                            <div class="clear"></div>
+                            <button id="place-chicken" class="small-button">Place</button>
+                        </div>
+                    </div>
+                    <div id="attack-stage-wrapper">
+                        <h3>units:</h3>
+                        <div class="unit-wrapper clearfix">
+                            <h2>pig: 6$</h2>
+                            <img src="images/pig.gif" width="70" height="70" class="left" />
+                            <button id="add-pig">+</button>
+                            <input type="text" id="value-pig" value="1" disabled />
+                            <button id="remove-pig" >-</button>
+                            <div class="clear"></div>
+                            <button id="place-pig" class="small-button">Place</button>
+                        </div>
+                        <div class="unit-wrapper clearfix">
+                            <h2>big bomb: 10$</h2>
+                            <img src="images/bomb.png" width="70" height="70" class="left" />
+                            <button id="add-bomb">+</button>
+                            <input type="text" id="value-bomb" value="1" disabled />
+                            <button id="remove-bomb" >-</button>
+                            <div class="clear"></div>
+                            <button id="place-bomb" class="small-button">Place</button>
+                        </div>
+                    </div>
+                    <div id="other-player-playing-wrapper">
+                        <h3>Other Player is playing now. Please wait your turn</h3>
+                    </div>
+                    <div id="collect-stage-wrapper">
+                        <h3>Collecting Money</h3>
+                    </div>
+                </div>
+                <button id="next-stage">Next Stage</button>
+                <ul id="stages">
+                    <li id="firstplayer-build" class="current-stage">1. Build</li>
+                    <li id="firstplayer-attack">1. Attack</li>
+                    <li id="secondplayer-build">2. Build</li>
+                    <li id="secondplayer-attack">2. Attack</li>
+                    <li id="collect">Collect</li>
+                </ul>
+            </div>
+            <div id="game-container"></div>
+        </div>
+    </div>
+</body>
+</html>

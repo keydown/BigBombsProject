@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Multiplayer";
+    Layout = "";
+}
+@Html.ActionLink(" ", "Index", "Home", routeValues: null, htmlAttributes: new { @class="back-button"})
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Big Bombs Game</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/MetroNotificationStyle.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    </head>
+<body>
+    <div id="main-container">
+            <div id="options">
+                <button id="btn-join-random-game" class="button">Join Random Game</button>
+                <button id="btn-create-game" class="button">Create Game</button>
+                <button id="btn-join-game" class="button">Join Game</button>
+                <input type="text" id="game-id-join" />
+                <label for="game-id-join">Game ID (provided by your friend)</label>
+            </div>
+            <div id="game-wrapper">
+                <div id="hud-container">
+                    <div id="on-turn-wrapper">
+                        <h3>move:</h3>
+                        <h1 id="user-on-move">user1</h1>
+                    </div>
+                    <div id="players-money">
+                        <h3>money:</h3>
+                        <h2><span id="creator-name">user1</span>: <span id="first-player-money">100</span>$</h2>
+                        <h2><span id="guest-name">user2</span>: <span id="second-player-money">100</span>$</h2>
+                    </div>
+                    <div id="unit-selection">
+                        <div id="build-stage-wrapper">
+                            <h3>units:</h3>
+                            <div class="unit-wrapper clearfix">
+                                <h2>Mine</h2>
+                                <h4>Cost: 6$</h4>
+                                <h4>Collects: 10$</h4>
+                                <img src="/Images/saltmine.gif" width="70" height="70" class="left" />
+                                <button id="add-mine" disabled>+</button>
+                                <input type="text" id="value-mine" value="1" disabled/>
+                                <button id="remove-mine" disabled>-</button>
+                                <div class="clear"></div>
+                                <button id="place-mine" class="small-button">Place</button>
+                            </div>
+                            <div class="unit-wrapper clearfix">
+                                <h2>Chicken</h2>
+                                <h4>Cost: 1$</h4>
+                                <h4>Power: 1</h4>
+                                <img src="/Images/chicken.gif" width="70" height="70" class="left" />
+                                <button id="add-chicken">+</button>
+                                <input type="text" id="value-chicken" disabled value="1" />
+                                <button id="remove-chicken" >-</button>
+                                <div class="clear"></div>
+                                <button id="place-chicken" class="small-button">Place</button>
+                            </div>
+                        </div>
+                        <div id="attack-stage-wrapper">
+                            <h3>units:</h3>
+                            <div class="unit-wrapper clearfix">
+                                <h2>Pig</h2>
+                                <h4>Cost: 7$</h4>
+                                <h4>Power: 2</h4>
+                                <img src="/Images/pig.gif" width="70" height="70" class="left" />
+                                <button id="add-pig">+</button>
+                                <input type="text" id="value-pig" value="1" disabled />
+                                <button id="remove-pig" >-</button>
+                                <div class="clear"></div>
+                                <button id="place-pig" class="small-button">Place</button>
+                            </div>
+                            <div class="unit-wrapper clearfix">
+                                <h2>Big Bomb</h2>
+                                <h4>Cost: <span id="bomb-cost">10</span>$</h4>
+                                <h4>Power: <span>over 9000</span></h4>
+                                <img src="/Images/bomb.png" width="70" height="70" class="left" />
+                                <button id="add-bomb">+</button>
+                                <input type="text" id="value-bomb" value="1" disabled />
+                                <button id="remove-bomb" >-</button>
+                                <div class="clear"></div>
+                                <button id="place-bomb" class="small-button">Place</button>
+                            </div>
+                        </div>
+                        <div id="other-player-playing-wrapper">
+                            <h3>Other Player is playing now. Please wait your turn.</h3>
+                        </div>
+                        <div id="collect-stage-wrapper">
+                            <h3>Collecting Money</h3>
+                        </div>
+                    </div>
+                    <button id="next-stage">Next Stage</button>
+                    <ul id="stages">
+                        <li id="firstplayer-build" class="current-stage">1. Build</li>
+                        <li id="secondplayer-build">2. Build</li>
+                        <li id="firstplayer-attack">1. Attack</li>
+                        <li id="secondplayer-attack">2. Attack</li>
+                        <li id="collect">Collect</li>
+                    </ul>
+                </div>
+                <div id="game-container"></div>
+            </div>
+        </div>
+    <script>
+        myUserName = "@HttpContext.Current.User.Identity.Name";
+    </script>
+    <script src="~/Scripts/jquery-1.6.4.js"></script>
+    <script src="~/Scripts/kinetic-v3.9.1.js"></script>
+    <script src="~/Scripts/jquery.signalR-1.0.0.min.js"></script>
+    <script src="~/Scripts/MetroNotification.min.js"></script>
+    <script src="~/Scripts/bb/mine.js"></script>
+    <script src="~/Scripts/bb/pig.js"></script>
+    <script src="~/Scripts/bb/chicken.js"></script>
+    <script src="~/Scripts/bb/bigbomb.js"></script>
+    <script src="~/Scripts/bb/siteController.js"></script>
+    <script src="~/Scripts/bb/bigBombsGame.js"></script>
+    <script src="/signalr/hubs"></script>
+</body>
+</html>

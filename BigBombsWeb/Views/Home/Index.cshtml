@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Big Bombs Game - KeyDown TM";
+}
+@section featured {
+    
+    <div id="site-wrapper">
+        <section id="login" class="clearfix">
+            @Html.Partial("_LoginPartial")
+        </section>
+        <nav>
+            <ul id="main-nav" class="clearfix">
+                <li class="main-nav-box red"><a href="#">Single Player<br /><br /><span>under construction</span></a></li>            
+                <li class="main-nav-box green">@Html.ActionLink("Multi Player", "Multiplayer")</li>
+                <li class="main-nav-box blue">@Ajax.ActionLink("Hall Of Fame", "HallOfFame", new AjaxOptions {
+                                                                                                    UpdateTargetId = "content",
+                                                                                                    InsertionMode=InsertionMode.Replace,
+                                                                                                    HttpMethod="GET"       
+                                                                                                })</li>
+                <li class="main-nav-box red">@Ajax.ActionLink("How-To", "HowTo", new AjaxOptions {
+                                                                                                    UpdateTargetId = "content",
+                                                                                                    InsertionMode=InsertionMode.Replace,
+                                                                                                    HttpMethod="GET"       
+                                                                                                })</li>
+                <li class="main-nav-box green">@Ajax.ActionLink("About", "About", new AjaxOptions {
+                                                                                                    UpdateTargetId = "content",
+                                                                                                    InsertionMode=InsertionMode.Replace,
+                                                                                                    HttpMethod="GET"       
+                                                                                                })</li>
+            </ul>
+        </nav>    
+        <section id="content">
+        </section>
+        <script src="~/Scripts/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="~/scripts/jquery.unobtrusive-ajax.js"></script>
+    </div>
+}

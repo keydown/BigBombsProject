@@ -1,0 +1,251 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html
+{
+    height: 100%;
+}
+img
+{
+	border: 0;
+}
+body, button
+{
+    /*'Trade Winds',*/
+	font: 12px 'Tienne', "Segoe UI", "Times New Roman", serif;
+}
+h1 
+{
+    font-size: 25px;
+    text-align: center;	
+}
+.left 
+{
+	float: left;
+}
+.right 
+{
+    float: right;
+}
+.clear 
+{
+	clear: both;
+}
+.clearfix:after
+{
+    content: "";
+    display: block;
+	clear: both;
+	height: 0;
+}
+p 
+{
+	margin-top: 10px;
+}
+ul
+{
+    list-style-type: none;
+}
+h3
+{
+    font-size: 10px;
+    text-align: center;
+}
+.button
+{
+    display: block;
+    width: 300px;
+    height: 70px;
+    background: url('images/button1.png') 0 0 no-repeat;
+    background-size: 100%;
+    margin: 10px auto;
+    border: 0;
+    font: 24px 'Tienne', serif;
+    font-weight: bold;
+    cursor: pointer;
+    color: #4ab942;
+    text-shadow: 1px 1px 2px #383838;
+    filter: dropshadow(color=#383838, offx=, offy=1);
+}
+    .button:hover
+    {
+        background-image: url('images/button2.png');
+    }
+
+
+#main-container
+{
+    width: 1300px;
+    height: 700px;
+    margin: 0px auto;
+    position: relative;
+}
+#options
+{
+    width: 1300px;
+    position: absolute;
+}
+    #options label
+    {
+        display: block;
+        text-align: center;
+    }
+#game-id-join
+{
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+#game-wrapper
+{
+    width: 1300px;
+    height: 700px;
+    position: relative;
+    background: url('images/background.jpg') 0 0 no-repeat;
+}
+#game-id-generated, #game-wrapper, #mdl-waiting, #attack-stage-wrapper, #collect-stage-wrapper, #other-player-playing-wrapper
+{
+    display: none;
+}
+
+#hud-container
+{
+    height: 700px;
+    width: 100px;
+    float: left;
+}
+#on-turn-wrapper
+{
+    width: 100px;
+    height: 35px;
+    border-bottom: 2px solid #808080;
+}
+    #on-turn-wrapper h1
+    {
+        width: 100px;
+        font-size: 16px;
+        text-align: center;
+        height: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 15px;
+    }
+#unit-selection
+{
+    width: 100px;
+    height: 250px;
+    border-bottom: 2px solid #808080;
+}
+    #unit-selection h2
+    {
+        font-size: 10px;
+    }
+    #unit-selection .unit-wrapper
+    {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+        #unit-selection .unit-wrapper button
+        {
+            width: 30px;
+            float: right;
+            height: 20px;
+            background-color: #00b880;
+            border: 0;
+        }
+            #unit-selection .unit-wrapper button:hover
+            {
+                border: 2px solid #808080;
+            }
+#value-chicken, #value-pig, #value-mine, #value-bomb
+{
+    height: 30px;
+    width: 30px;
+    float: right;
+    text-align: center;
+}
+#unit-selection button.small-button
+{
+    width: 100px;
+    height: 20px;
+    background-color: #aabd00;
+    border: 0;
+    margin-top: 3px;
+}
+    #unit-selection button.small-button:hover
+    {
+        border: 2px solid #808080;
+    }
+
+
+#players-money
+{
+    width: 100px;
+    height: 50px;
+    padding: 2px;
+    border-bottom: 2px solid #808080;
+}
+    
+    #players-money h2
+    {
+        font-size: 10px;
+    }
+    #players-money span:first-child
+    {
+        display: inline-block;
+        width: 55px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    #first-player-name-money, #second-player-name-money
+    {
+        font-size: 10px;
+    }
+
+#stages
+{
+    width: 100px;
+    height: 150px;
+    margin: 0 auto;
+    padding-top: 7px;
+    border-bottom: 2px solid #808080;
+    border-top: 2px solid #808080;
+    text-align: center;
+    font-size: 16px;
+}
+    #stages li
+    {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        background-color: #afafaf;
+    }
+    #stages li.current-stage
+    {
+        background-color: #4ab942;
+    }
+#next-stage
+{
+    background-color: #aabd00;
+    width: 100px;
+    height: 50px;
+    display: block;
+    border: 0;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+    #next-stage:hover
+    {
+        border: 2px solid #808080;
+    }
+#game-container
+{
+    position: absolute;
+    width: 987px;
+    height: 700px;
+    right: 100px;
+}

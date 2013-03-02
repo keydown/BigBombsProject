@@ -1,0 +1,95 @@
+44
+mine 0 0
+mine 0 3
+mine 0 6
+mine 0 9
+mine 0 12
+mine 6 0
+mine 6 3
+mine 6 6
+mine 6 9
+mine 6 12
+mine 12 0
+mine 12 3
+mine 12 6
+mine 12 9
+mine 12 12
+mine 18 0
+mine 18 3
+mine 18 6
+mine 18 9
+mine 18 12
+mine 24 0
+mine 24 3
+chickens 3 1 0
+chickens 3 1 3
+chickens 3 1 6
+chickens 3 1 9
+chickens 3 1 12
+chickens 3 7 0
+chickens 3 7 3
+chickens 3 7 6
+chickens 3 7 9
+chickens 3 7 12
+chickens 5 13 0
+chickens 3 13 3
+chickens 3 13 6
+chickens 3 13 9
+chickens 3 13 12
+chickens 3 19 0
+chickens 3 19 3
+chickens 3 19 6
+chickens 3 19 9
+chickens 3 19 12
+chickens 3 25 0
+chickens 3 25 3
+----------------------
+3
+chickens 97 0 0
+chickens 97 36 0
+mine 98 98
+----------------------
+20
+mine 12 0
+mine 12 3
+mine 12 6
+mine 12 9
+mine 12 12
+mine 6 0
+mine 6 3
+mine 6 6
+mine 6 9
+mine 6 12
+chickens 14 13 0
+chickens 14 13 3
+chickens 14 13 6
+chickens 14 13 9
+chickens 14 13 12
+chickens 14 7 0
+chickens 14 7 3
+chickens 14 7 6
+chickens 14 7 9
+chickens 14 7 12
+----------------------
+5
+chickens 94 0 0
+chickens 94 32 0
+mine 98 98
+chickens 3 97 98
+chickens 3 34 0
+----------------------
+4
+chickens 5 1 2
+chickens 6 3 2
+mine 2 2
+chickens 4 3 3
+----------------------
+8
+mine 2 2
+mine 3 2
+chickens 30 2 1
+chickens 30 3 1
+chickens 34 1 2
+chickens 34 4 2
+chickens 30 2 3
+chickens 30 3 3

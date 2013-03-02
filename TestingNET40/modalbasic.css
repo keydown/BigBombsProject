@@ -1,0 +1,49 @@
+#basic-modal-content 
+{
+    display:none;
+}
+#simplemodal-overlay 
+{
+    background-color: #000; 
+    cursor: wait;
+}
+#simplemodal-container 
+{
+    height: 300px; 
+    width: 600px; 
+    color: #000; 
+    background-color: #CCE0FF; 
+    border: 5px solid #5899FC; 
+    padding: 12px;
+}
+#simplemodal-container a.modalCloseImg 
+{
+    background: url(../images/x.png) no-repeat; 
+    width: 25px; 
+    height: 29px; 
+    display: inline; 
+    z-index: 3200; 
+    position: absolute; 
+    top: -15px;
+    right: -16px; 
+    cursor: pointer;
+}
+#simplemodal-container form
+{
+    margin-bottom: 20px;
+}
+#simplemodal-container .smallButton
+{
+    padding: 5px 20px;
+    border: 3px solid #5899FC;
+    background-color: #95BEFC;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+#simplemodal-container .smallButton:hover
+{
+    cursor: pointer;
+    background-color: #77ACFC;
+}

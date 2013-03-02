@@ -1,0 +1,34 @@
+﻿@model ICollection<BigBombsWeb.Models.ExternalLogin>
+
+@if (Model.Count > 0)
+{
+    <h2>Registered external logins</h2>
+    <table>
+        <tbody>
+        @foreach (BigBombsWeb.Models.ExternalLogin externalLogin in Model)
+        {
+            <tr>
+                <td>@externalLogin.ProviderDisplayName</td>
+                <td>
+                    @if (ViewBag.ShowRemoveButton)
+                    {
+                        using (Html.BeginForm("Disassociate", "Account"))
+                        {
+                            @Html.AntiForgeryToken()
+                            <fieldset>
+                                @Html.Hidden("provider", externalLogin.Provider)
+                                @Html.Hidden("providerUserId", externalLogin.ProviderUserId)
+                                <input type="submit" value="Remove" class="metro-button" title="Remove this @externalLogin.ProviderDisplayName credential from your account" />
+                            </fieldset>
+                        }
+                    }
+                    else
+                    {
+                        @: &nbsp;
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
